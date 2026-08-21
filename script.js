@@ -33,7 +33,7 @@ function changeBackground() {
 function resetPage() {
     mainHeading.textContent = "Basic Event-Driven Webpage";
     nameInput.value = "";
-    messageArea.textContent = "Enter your name and select an action.";
+    messageArea.textContent = "";
     document.body.style.backgroundColor = "#f3f4f6";
 
     console.log("Page reset.");
@@ -43,10 +43,29 @@ function showMouseoverMessage() {
     console.log("The mouse is over the greeting button.");
 }
 
+// Event source: greetingButton
+// Event listener: click
+// Event handler: displayGreeting
 greetingButton.addEventListener("click", displayGreeting);
+
+// Event source: backgroundButton
+// Event listener: click
+// Event handler: changeBackground
 backgroundButton.addEventListener("click", changeBackground);
+
+// Event source: resetButton
+// Event listener: click
+// Event handler: resetPage
 resetButton.addEventListener("click", resetPage);
+
+// Event source: nameInput
+// Event listener: input
+// Event handler: showTypedText
 nameInput.addEventListener("input", showTypedText);
+
+// Event source: greetingButton
+// Event listener: mouseover
+// Event handler: showMouseoverMessage
 greetingButton.addEventListener("mouseover", showMouseoverMessage);
 
 console.log("JavaScript file loaded successfully.");
